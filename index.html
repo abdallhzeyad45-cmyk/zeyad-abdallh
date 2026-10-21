@@ -1,0 +1,209 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>عالم شوشو السري 💜</title>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;color:#fff;
+ font-family:Tahoma,Arial,sans-serif;text-align:center;
+ background:radial-gradient(ellipse at top,#592477,#210d35 55%,#10091b);
+ overflow-x:hidden
+}
+button,input{font:inherit}
+button{
+ border:1px solid #d9b4ff;background:linear-gradient(135deg,#a855f7,#7134a8);
+ color:white;padding:13px 20px;border-radius:24px;
+ margin:7px;cursor:pointer;box-shadow:0 0 18px #a855f744
+}
+button:active{transform:scale(.96)}
+input{
+ display:block;margin:18px auto;padding:13px;
+ width:min(85%,300px);border-radius:15px;
+ border:1px solid #d8b4fe;background:#ffffff12;
+ color:white;text-align:center;outline:none
+}
+input::placeholder{color:#dfc9ee}
+.screen{display:none;min-height:100vh;padding:30px 17px 60px}
+.screen.active{display:flex;flex-direction:column;align-items:center;justify-content:center}
+h1{color:#f4d7ff;text-shadow:0 0 22px #d580ff}
+p{line-height:2;max-width:650px}
+.rose{font-size:76px;filter:drop-shadow(0 0 18px #e0a3ff);animation:bloom 3s infinite alternate}
+@keyframes bloom{to{transform:scale(1.12) rotate(5deg);filter:drop-shadow(0 0 30px #f0abff)}}
+.panel{
+ width:min(100%,560px);padding:23px 17px;margin:15px auto;
+ border:1px solid #d9b4ff55;border-radius:24px;
+ background:#ffffff0b;box-shadow:0 0 30px #a855f722;
+ backdrop-filter:blur(8px)
+}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;width:min(100%,500px)}
+.grid button{margin:0;min-height:65px}
+.small{color:#e4c8f3;font-size:13px}
+#toast{min-height:45px;color:#ffd8fa;line-height:1.8}
+.letter{white-space:pre-line;text-align:right}
+.fall{
+ position:fixed;top:-35px;z-index:5;pointer-events:none;
+ animation:fall linear forwards
+}
+@keyframes fall{to{transform:translateY(115vh) rotate(480deg);opacity:0}}
+#musicBtn{position:fixed;bottom:12px;left:12px;z-index:10}
+.star{display:inline-block;color:#f4d7ff;animation:twinkle 1.7s infinite alternate}
+@keyframes twinkle{to{opacity:.25;transform:scale(.7)}}
+</style>
+</head>
+<body>
+
+<audio id="song" src="song.mp3" loop></audio>
+<button id="musicBtn" onclick="music()">🎵 تشغيل الموسيقى</button>
+
+<section id="gate" class="screen active">
+ <div class="rose">🌹</div>
+ <h1>عالم شوشو السري 💜</h1>
+ <p>في عالم صغير معمول مخصوص ليكي، في كلام مستخبي ومستنيكي تكتشفيه...</p>
+ <div class="panel">
+  <h3>🔐 بوابة القلب</h3>
+  <p>افتحي يا روحي، زي ما فتحتي قلبي ❤️</p>
+  <input id="pass" type="password" placeholder="اكتبي كلمة السر">
+  <button onclick="unlock()">افتحي عالمك 💜</button>
+  <p id="error" class="small"></p>
+ </div>
+ <span class="small">كل وردة هنا وراها حكاية 🌷</span>
+</section>
+
+<section id="garden" class="screen">
+ <div class="rose">💜🌹</div>
+ <h1>أهلًا بصاحبة العالم ده</h1>
+ <p>يا شوشو، المرة دي مش جايلك بصورة ولا بكلمتين وخلاص... جايلك بعالم صغير، كل ركن فيه مخبي حاجة من قلبي ليكي.</p>
+ <div class="panel">
+  <h3>اختاري باب وافتحيه ✨</h3>
+  <div class="grid">
+   <button onclick="reveal(0)">💌 جواب القلب</button>
+   <button onclick="reveal(1)">🌷 وردة ليكي</button>
+   <button onclick="reveal(2)">🤍 كلمة من قلبي</button>
+   <button onclick="reveal(3)">🎁 مفاجأة سرية</button>
+   <button onclick="reveal(4)">🌙 أمنية ليكي</button>
+   <button onclick="reveal(5)">✨ سر أخير</button>
+  </div>
+  <div id="toast"></div>
+ </div>
+ <button onclick="show('letter')">افتحي الرسالة الكبيرة 💌</button>
+ <button onclick="show('stars')">رحلة النجوم 🌌</button>
+</section>
+
+<section id="letter" class="screen">
+ <div class="rose">💌</div>
+ <h1>من زياد إلى شوشو</h1>
+ <div class="panel letter">
+يا شوشو، يا غالية على قلبي 💜
+
+يمكن مفيش صورة لينا مع بعض أحطها هنا، بس مش كل الحاجات الحلوة لازم تتصور عشان يبقى ليها معنى. في حاجات مكانها القلب، وفي لحظات بتفضل جوانا من غير ما تحتاج إطار.
+
+أنا عامل لك العالم الصغير ده عشان أقولك إنك غالية عندي، وإن ابتسامتك وراحتك يفرقوا معايا. ولو الدنيا ضغطت عليكي في يوم، مش مطلوب منك تبقي قوية طول الوقت، ولا تشرحي كل حاجة جواكي. خدي وقتك وراحتك، وافتكري إنك تستاهلي الهدوء والفرحة والحاجات الحلوة.
+
+ولو قصّرت في حقك في يوم، أو كلمة مني زعلتك، فحقك عليا. مش عايز الكلام الحلو يبقى مجرد كلام؛ نفسي دايمًا أكون أحنّ في تعاملي، وأفهمك أكتر، وأسمعك من غير ما أضغط عليكي.
+
+يا شوشو، الهدية دي بسيطة قدام كل الكلام اللي ممكن يتقال، بس كل تفصيلة فيها معمولة بنية حلوة ليكي. أتمنى كل ما تشوفيها تفتكري إن في حد بيتمنالك أيام أهدى، وضحكة من قلبك، وأخبار تفرحك.
+
+خلي قلبك بخير يا روحي، ومتستقليش بنفسك أبدًا. 💜
+
+من زياد، بكل الود اللي في قلبي ليكي 🌹
+ </div>
+ <button onclick="show('garden')">ارجعي للمفاجآت 💜</button>
+ <button onclick="show('stars')">لسه فيه سر أخير ✨</button>
+</section>
+
+<section id="stars" class="screen">
+ <div style="font-size:45px">
+  <span class="star">✦</span> 🌙 <span class="star">✧</span>
+ </div>
+ <h1>أمنية تحت السما البنفسجية</h1>
+ <div class="panel">
+  <p>لو كان بإيدي أهديكي حاجة غير الورد والكلام، كنت هتمنالك راحة تطمن قلبك، وأيام تعوضك عن كل تعب، وضحكة تخرج منك من غير أي سبب غير إنك مبسوطة.</p>
+  <p>مش لازم كل يوم يكون مثالي... كفاية تلاقي فيه لحظة حلوة تستاهل تتعاش. 💜</p>
+  <button onclick="wish()">اضغطي عشان أمنيتك 🌠</button>
+  <div id="wishText"></div>
+ </div>
+ <div class="rose">🌹</div>
+ <h2>كل سنة وانتي طيبة يا شوشو</h2>
+ <p>من زياد ليكي، بكل الود والاهتمام 💜</p>
+ <button onclick="show('garden')">ارجعي لحديقتك السرية</button>
+</section>
+
+<script>
+const password="23/9/2010";
+const messages=[
+ "يا شوشو، مش كل الكلام بيتقال... في كلام بيتحس بالقلب بس. وإنتِ غالية أوي عندي 💜",
+ "الوردة دي رمز لأمنية: إن أيامك الجاية تكون أحنّ عليكي من اللي فات 🌷",
+ "مش لازم تبقي بخير طول الوقت. خدي نفسك براحتك، وإدي لنفسك الحنية اللي بتديها لغيرك 🤍",
+ "المفاجأة الحقيقية مش في الموقع... هي إنك تستاهلي حاجات حلوة من غير ما تضطري تطلبيها 🎁",
+ "أمنيتي ليكي إن ربنا يريح قلبك، ويفرحك، ويكتبلك الخير في كل خطوة 🤲💜",
+ "السر الأخير: مهما اتغير شكل الأيام، أتمنى تفضلي فاكرة إنك إنسانة غالية وتستاهلي كل خير ✨"
+];
+function show(id){
+ document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+ document.getElementById(id).classList.add("active");
+ window.scrollTo(0,0);
+}
+function unlock(){
+ if(document.getElementById("pass").value.trim()===password){
+  document.getElementById("error").textContent="";
+  show("garden");burst();
+ }else{
+  document.getElementById("error").textContent="الباب لسه مقفول يا شوشو 💜 جربي تاني";
+ }
+}
+document.getElementById("pass").addEventListener("keydown",e=>{
+ if(e.key==="Enter")unlock();
+});
+function reveal(i){
+ document.getElementById("toast").textContent=messages[i];
+ burst();
+}
+function wish(){
+ document.getElementById("wishText").innerHTML=
+ "<p>🌠 أمنيتك النهارده: راحة لقلبك، نور لطريقك، وفرحة تيجي في وقت تكوني محتاجاها فيه.</p>";
+ burst();
+}
+let playing=false;
+async function music(){
+ const a=document.getElementById("song");
+ if(!playing){
+  try{
+   await a.play();playing=true;
+   document.getElementById("musicBtn").textContent="⏸ إيقاف الموسيقى";
+  }catch(e){
+   document.getElementById("musicBtn").textContent="🎵 ضيفي song.mp3";
+  }
+ }else{
+  a.pause();playing=false;
+  document.getElementById("musicBtn").textContent="🎵 تشغيل الموسيقى";
+ }
+}
+function burst(){
+ const symbols=["💜","🌸","🌹","✨","🤍"];
+ for(let i=0;i<16;i++){
+  const el=document.createElement("span");
+  el.className="fall";
+  el.textContent=symbols[Math.floor(Math.random()*symbols.length)];
+  el.style.left=Math.random()*100+"vw";
+  el.style.animationDuration=(3+Math.random()*4)+"s";
+  el.style.fontSize=(15+Math.random()*20)+"px";
+  document.body.appendChild(el);
+  setTimeout(()=>el.remove(),7500);
+ }
+}
+setInterval(()=>{
+ if(document.visibilityState==="visible"&&Math.random()>.45){
+  const s=document.createElement("span");
+  s.className="fall";s.textContent="✦";
+  s.style.left=Math.random()*100+"vw";
+  s.style.color="#e9c8ff";s.style.animationDuration="5s";
+  document.body.appendChild(s);setTimeout(()=>s.remove(),5100);
+ }
+},900);
+</script>
+</body>
+</html>
